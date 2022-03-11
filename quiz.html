@@ -7,7 +7,32 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function checkAnswers(form) {
-            alert("Complete Javascript, and disable this alert.");
+            let answerOne = form.inputOne.value;
+            let answerTwo = form.inputTwo.value;
+            let answerThree = form.inputThree.value;
+            let resultOne = ""
+            let resultTwo = ""
+            let resultThree = ""
+
+            if (answerOne === "One") {
+                resultOne = "Correct"
+            } else {
+                resultOne = "Incorrect"
+            }
+            if (answerTwo === "Two") {
+                resultTwo = "Correct"
+            } else {
+                resultTwo = "Incorrect"
+            }
+            if (answerThree === "Three") {
+                resultThree = "Correct"
+            } else {
+                resultThree = "Incorrect"
+            }
+
+            document.getElementById("outputOne").innerHTML = resultOne;
+            document.getElementById("outputTwo").innerHTML = resultTwo;
+            document.getElementById("outputThree").innerHTML = resultThree;
         }
     </script>
 </head>
