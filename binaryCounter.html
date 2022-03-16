@@ -7,7 +7,13 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function powers() {
-            alert("Complete Javascript, and disable this alert.");
+            let powerOutput = "";
+
+            for (let loopCounter = 0; loopCounter<=100; loopCounter++) {
+                powerOutput = powerOutput + "<br>"+loopCounter + ": "+Math.pow(2,loopCounter);
+
+            }
+            document.getElementById("output").innerHTML = powerOutput;
         }
     </script>
 </head>
