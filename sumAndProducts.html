@@ -7,7 +7,20 @@
     <link rel="stylesheet" href="mainSite.css">
     <script>
         function randomNumberGenerator(nums) {
-            alert("Complete Javascript, and disable this alert.");
+            let randomNumbers = [];
+            let numberDetails = {
+                sum : 0,
+                product: 1
+            }
+            for (let loopCounter = 0; loopCounter<nums; loopCounter++) {
+                randomNumbers.push(Math.random() * 100);
+            }
+            for (let loopCounter = 0; loopCounter<nums; loopCounter++) {
+                numberDetails["sum"] = numberDetails["sum"] + randomNumbers[loopCounter];
+                numberDetails["product"] = numberDetails["product"] * randomNumbers[loopCounter];
+            }
+            document.getElementById("randomNumbersOutput").innerHTML = numberDetails["sum"] + "<br>"+numberDetails["product"];
+
         }
     </script>
     <style>
